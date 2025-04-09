@@ -5,7 +5,7 @@ import {
   CalculatorLayout,
   InputsSection,
   ResultsSection,
-  NumberInput,
+
   ErrorMessage
 } from './Calculator.styles';
 import InputField from '../InputField/InputField';

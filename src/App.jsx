@@ -1,6 +1,7 @@
 // src/App.jsx
 import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
+
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import Calculator from './Calculator/Calculator'; // file Calculator của bạn

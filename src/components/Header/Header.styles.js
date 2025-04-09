@@ -22,8 +22,13 @@ export const NavLink = styled.div`
   cursor: pointer;
   position: relative;
   
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
   &.active {
-    color: #8526ff;
+    color: #ff3333;
     &::after {
       content: '';
       position: absolute;
@@ -31,7 +36,7 @@ export const NavLink = styled.div`
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #8526ff;
+      background-color: #ff3333;
     }
   }
 `;
