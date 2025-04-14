@@ -4,7 +4,7 @@ export const calculateLoanAmount = (purchasePrice, downPayment) => {
   };
   
   // Hàm tính số tiền trả hàng tháng (Monthly Payment)
-  // Sử dụng công thức: M = P[r(1+r)^n/((1+r)^n)-1)]
+
   export const calculateMonthlyPayment = (loanAmount, interestRate, years) => {
     const principal = loanAmount;
     const monthlyRate = interestRate / 100 / 12;
@@ -21,7 +21,7 @@ export const calculateLoanAmount = (purchasePrice, downPayment) => {
     return monthlyPayment;
   };
   
-  // Hàm định dạng số tiền thành chuỗi có dấu phẩy ngăn cách hàng nghìn
+
   export const formatCurrency = (amount, decimalPlaces = 0) => {
     return new Intl.NumberFormat('vi-VN', {
       minimumFractionDigits: decimalPlaces,

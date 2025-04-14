@@ -34,7 +34,7 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/-CalculatorThanhTruc">
       <div className="App">
         <AnimatedRoutes />
       </div>
