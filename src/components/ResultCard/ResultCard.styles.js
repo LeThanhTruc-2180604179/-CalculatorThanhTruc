@@ -17,7 +17,8 @@ export const LoanAmount = styled.div`
 `;
 
 export const AmountLabel = styled.div`
-  font-size: 0.9rem;
+  font-size: 1.2rem; /* Updated to match CTAPrompt */
+  font-weight: bold; /* Already added for bold */
   margin-bottom: 0.5rem;
 `;
 
@@ -50,10 +51,12 @@ export const CTAText = styled.div`
   color: #ccc;
   margin-bottom: 1.5rem;
 `;
+
 export const InvalidAmount = styled.div`
   font-size: 2rem;
   font-weight: bold;
 `;
+
 export const CTAButton = styled.button`
   width: 100%;
   padding: 1rem;
@@ -67,5 +70,4 @@ export const CTAButton = styled.button`
   &:hover {
     background-color: #e67e00;
   }
-    
 `;

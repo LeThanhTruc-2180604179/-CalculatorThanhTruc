@@ -1,3 +1,4 @@
+// ResultCard.jsx
 import React from 'react';
 import {
   CardContainer,
@@ -22,7 +23,7 @@ const ResultCard = ({ loanAmount, monthlyPayment, isValid }) => {
         <LoanAmount>
           <AmountLabel>Số tiền vay</AmountLabel>
           {isValid ? (
-            <Amount>${formatCurrency(loanAmount)}</Amount>
+            <Amount>${formatCurrency(loanAmount, 2)}</Amount>
           ) : (
             <InvalidAmount>—</InvalidAmount>
           )}
@@ -32,9 +33,13 @@ const ResultCard = ({ loanAmount, monthlyPayment, isValid }) => {
 
       <CardSection>
         <MonthlyPayment>
-          <AmountLabel>Số tiền phải trả hàng tháng</AmountLabel>
+          <AmountLabel>Số tiền phải trả</AmountLabel>
           {isValid ? (
-            <Amount>{formatCurrency(monthlyPayment, 2)}</Amount>
+            monthlyPayment !== null ? (
+              <Amount>${formatCurrency(monthlyPayment, 2)}</Amount>
+            ) : (
+              <InvalidAmount>—</InvalidAmount>
+            )
           ) : (
             <InvalidAmount>—</InvalidAmount>
           )}
@@ -44,9 +49,7 @@ const ResultCard = ({ loanAmount, monthlyPayment, isValid }) => {
 
       <CTASection>
         <CTAPrompt>Sẵn sàng mua trả góp?</CTAPrompt>
-        <CTAText>
-          Mua thì mua
-        </CTAText>
+        <CTAText>Mua thì mua</CTAText>
         <CTAButton>Nhận báo giá</CTAButton>
       </CTASection>
     </CardContainer>
