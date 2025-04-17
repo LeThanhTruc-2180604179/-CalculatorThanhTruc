@@ -27,13 +27,13 @@ const ResultCard = ({ loanAmount, monthlyPayment, isValid }) => {
           ) : (
             <InvalidAmount>—</InvalidAmount>
           )}
-          <AmountNote>Số tiền bạn vay</AmountNote>
+   
         </LoanAmount>
       </CardSection>
 
       <CardSection>
         <MonthlyPayment>
-          <AmountLabel>Số tiền phải trả</AmountLabel>
+          <AmountLabel>Số tiền phải trả hàng tháng</AmountLabel>
           {isValid ? (
             monthlyPayment !== null ? (
               <Amount>${formatCurrency(monthlyPayment, 2)}</Amount>
@@ -43,7 +43,7 @@ const ResultCard = ({ loanAmount, monthlyPayment, isValid }) => {
           ) : (
             <InvalidAmount>—</InvalidAmount>
           )}
-          <AmountNote>Số tiền bạn phải trả hàng tháng</AmountNote>
+       
         </MonthlyPayment>
       </CardSection>
 

@@ -1,4 +1,3 @@
-// calculator.js
 export const calculateLoanAmount = (purchasePrice, downPayment) => {
   return purchasePrice - downPayment;
 };
@@ -18,10 +17,11 @@ export const calculateMonthlyPayment = (loanAmount, interestRate, months) => {
   }
 
   const monthlyPayment = principal * 
-    (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / 
+    (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) /
     (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
 
-  return monthlyPayment;
+  // Làm tròn kết quả cuối cùng đến 2 chữ số thập phân
+  return Math.round(monthlyPayment * 100) / 100;
 };
 
 export const formatCurrency = (amount, decimalPlaces = 0) => {
