@@ -1,14 +1,13 @@
 export const calculateLoanAmount = (purchasePrice, downPayment) => {
   return purchasePrice - downPayment;
 };
-
 export const calculateMonthlyPayment = (loanAmount, interestRate, months) => {
   const principal = loanAmount;
-  
+
   if (interestRate === 0) {
     return months > 0 ? principal / months : 0;
   }
-  
+
   const monthlyRate = interestRate / 100 / 12;
   const numberOfPayments = months;
 
